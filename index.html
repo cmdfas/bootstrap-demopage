@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿科学上网网站-bootstrap</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<style>
+
+body{font-family: "Lato","Helvetica Neue",Helvetica,Arial,"Microsoft YaHei","微软雅黑"; color:#2c3e50; font-size: 15px; }
+h1,h2,h3,h4,h5,h6{ font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", 微软雅黑; font-weight: 700;}
+a, a:hover, a:focus, a:active, a.active{color:#18bc9c;}
+
+/*conmmon*/
+.img-centered{margin:0 auto;}
+p{font-size: 20px;}
+section{padding: 100px 0;}
+@media (max-width: 767px){
+	section{padding: 75px 0;}
+}
+
+@media(min-width: 768px){
+	.navbar-fixed-top{padding: 25px 0; transition:padding .3s; -webkit-transition:padding .3s;-moz-transition:padding .3s;}
+	.navbar-fixed-top.navbar-shrink{padding: 10px 0;}
+}
+
+.navbar{font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,"Microsoft YaHei", "微软雅黑"; font-weight: 700; min-height: 60px;}
+.navbar .navbar-nav {letter-spacing: 1px;}
+.navbar-default{background: #2c3e50; border: 0;}
+.navbar-default .navbar-nav li a{color:#fff;}
+@media(min-width: 768px){
+	.navbar-nav li a{padding-top:19.5px; padding-bottom: 19.5px;}
+}
+.navbar-default .navbar-brand{color:#fff;}
+@media(min-width: 768px){
+	.navbar-brand{font-size: 2em; transition:all .3s;  -webkit-transition:all .3s;  -moz-transition:all .3s;}
+}
+.navbar-default .navbar-brand:hover{color:#18bc9c;}
+
+
+
+
+header{text-align: center; color:#fff; background: #18bc9c;}
+header .container{padding-top: 100px; padding-bottom: 50px;}
+@media(min-width: 768px){
+	header .container{padding-top: 200px; padding-bottom: 100px;}
+}
+header img{margin: 0 auto 20px;}
+header .intro-text .name{font-size: 2em; font-weight: 700; font-family:Montserrat, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", 微软雅黑; }
+@media(min-width: 768px){
+	header .intro-text .name{font-size: 4.75em;}
+}
+header .intro-text .skills{font-size: 1.25em; font-weight: 300;}
+@media(min-width: 768px){
+	header .intro-text .skills{font-size: 1.75em;}
+}
+
+section h2{font-size: 3em; margin:0;}
+
+section.success{color:#fff; background: #18bc9c;}
+
+footer{color:#fff;}
+.footer-above{padding-top: 50px; background: #2c3e50;}
+.footer-col{margin-bottom: 50px;}
+footer h3{margin-bottom: 30px;}
+.footer-below{padding: 25px 0; background: #233140;}
+
+.scroll-top{z-index: 1111; position: fixed; right: 2%; bottom: 2%; width: 50px; height: 50px;}
+.scroll-top .btn{width: 50px; height: 50px; border-radius: 100%; font-size: 20px; line-height: 28px;}
+
+
+hr.star-light{border-color: #fff;}
+hr.star-light:after{color: #fff; background: #18bc9c}
+hr.star-primary{border-color:#2c3e50;}
+hr.star-primary:after{color::#2c3e50; background: #fff;}
+hr.star-light:after, hr.star-primary:after{
+	content: "\f005";
+	display: inline-block;
+	position: relative;
+	top: -.8em;
+	padding: 0 .25em;
+	font-family: FontAwesome;
+	font-size: 2em;
+}
+hr.star-light, hr.star-primary{
+	margin: 25px auto 30px;
+	padding: 0;
+	max-width: 250px;
+	border: 0;
+	border-top: solid 5px;
+	text-align: center;
+}
+
+.btn-social{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border:2px solid #fff;
+	border-radius: 100%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 45px;
+}
+.btn-outline{
+	margin-top: 15px;
+	color: #fff;
+	background: 0 0;
+	transition:all .3s ease-in-out;
+}
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active{
+	border: 2px solid #fff;
+	color:#18bc9c;
+	background: #fff;
+}
+	</style>
+</head>
+<body id="page-top">
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<!-- <span class="sr-noly">Toggle navigation</span> -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#page-top" class="navbar-brand">ISS</a>
+			</div>
+			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="page-scroll"><a href="#tutorials">如何使用</a></li>
+					<li class="page-scroll"><a href="#download">软件下载</a></li>
+					<li class="page-scroll"><a href="#free">免费SS</a></li>
+					<li class="page-scroll"><a href="#purchase">商家推荐</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="images/profile.png" class="img-responsive">
+					<div class="intro-text">
+						<span class="name">改善网络,提升效率</span>
+						<hr class="star-light">
+						<span class="skills">轻巧快速 - 使用简单 - 稳定自如的网络优化方式</span>
+						<br>
+						<span class="skills">本站之信息仅供科学研究和实验用途,已屏蔽多数非法网站和信息</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="tutorials">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>使用教程</h2>
+					<hr class="star-primary">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 portfolio-item">
+					<a href="#" class="portfolio-link" date-toggle="modal">
+						<div class="caption">
+							<div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div>
+						</div>
+						<img src="images/windows.png" class="img-responsive">
+						<center>
+							<h3>WINDOWS使用教程</h3>
+						</center>
+					</a>
+				</div>
+				<div class="col-sm-4 portfolio-item">
+					<a href="#" class="portfolio-link" date-toggle="modal">
+						<div class="caption">
+							<div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div>
+						</div>
+						<img src="images/android.png" class="img-responsive">
+						<center>
+							<h3>ANDROID使用教程</h3>
+						</center>
+					</a>
+				</div>
+				<div class="col-sm-4 portfolio-item">
+					<a href="#" class="portfolio-link" date-toggle="modal">
+						<div class="caption">
+							<div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div>
+						</div>
+						<img src="images/mac.png" class="img-responsive">
+						<center>
+							<h3>MACBOOK使用教程</h3>
+						</center>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="success" id="download">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>软件下载</h2>
+					<hr class="star-light">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 text-center">
+					<img src="images/windows-circle.png" class="responsive img-centered">
+					<h3>WINDOWS</h3>
+					<p>Win7及以下 <a href="#" class="btn btn-info"> <i class="fa fa-download"></i> 官方下载</a> <a href="#" class="btn btn-info"> <i class="fa fa-download"></i> 百度网盘</a> 提取码7qth</p>
+					<p>Win8及以上 <a href="#" class="btn btn-info"> <i class="fa fa-download"> </i> 官方下载</a> <a href="#" class="btn btn-info"> <i class="fa fa-download"></i> 百度网盘 </a> 提取码7qth</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<img src="images/android-circle.png" class="responsive img-centered">
+					<h3>ANDROID</h3>
+					<p><a href="#" class="btn btn-info"><i class="fa fa-download"></i> Google Play</a></p>
+					<p><a href="#" class="btn btn-info"> <i class="fa fa-download"></i> 百度网盘 </a> 提取码aay4</p>
+				</div>
+			</div>
+			<hr class="star-light">
+			<div class="row">
+				<div class="col-sm-6 text-center">
+					<img src="images/mac_os_x-circle.png" class="responsive img-centered">
+					<h3>MAC OS X</h3>
+					<p><a href="#" class="btn btn-info"><i class="fa fa-download"></i> 官方下载</a></p>
+					<p><a href="#" class="btn btn-info"> <i class="fa fa-download"></i> 百度网盘</a> 提取码vbkc</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<img src="images/apple-circle.png" class="responsive img-centered">
+					<h3>IPHONE/IPAD</h3>
+					<p><a href="#" class="btn btn-info"><i class="fa fa-download"></i> APP STORE</a></p>
+					<p><a href="#" class="btn btn-info"><i class="fa fa-download"></i> 越狱版</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="free">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h3>实验账号</h3>
+					<hr class="star-primary">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<h4>A服务器地址:A.ISS.TF</h4>
+					<h4>端口:1024</h4>
+					<h4>A密码:00946780</h4>
+					<h4>加密方式:AES-256-CFB</h4>
+					<h4>状态:<font color="green">正常</font></h4>
+					<h4><font color="red">注意：每6小时更换一次密码</font></h4>
+				</div>
+				<div class="col-sm-4 text-center">
+					<h4>A服务器地址:A.ISS.TF</h4>
+					<h4>端口:1024</h4>
+					<h4>A密码:00946780</h4>
+					<h4>加密方式:AES-256-CFB</h4>
+					<h4>状态:<font color="green">正常</font></h4>
+					<h4><font color="red">注意：每6小时更换一次密码</font></h4>
+				</div>
+				<div class="col-sm-4 text-center">
+					<h4>A服务器地址:A.ISS.TF</h4>
+					<h4>端口:1024</h4>
+					<h4>A密码:00946780</h4>
+					<h4>加密方式:AES-256-CFB</h4>
+					<h4>状态:<font color="green">正常</font></h4>
+					<h4><font color="red">注意：每6小时更换一次密码</font></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<br>
+					<p>
+						<a href="#" class="btn btn-info"><i class="fa fa-paper-plane-o"></i> 更多账号</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="success" id="purchase">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>商家推荐</h2>
+					<hr class="star-light">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<h3>
+						<a href="#"><font color="white">佛跳墙</font></a>
+					</h3>
+					<h4>免费试用3天</h4>
+					<h4>美国/日本/香港/台湾/新加坡/韩国</h4>
+					<h4>同时支持SS和V-P-N</h4>
+					<h4>不限流量,人工开通,同时5终端,性价比高</h4>
+					<p>
+						<a href="#" class="btn btn-info"><i class="fa fa-home"></i> 前往官网</a>
+					</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<h3>
+						<a href="#"><font color="white">云影|CLOUDSS</font></a>
+					</h3>
+					<h4>5元体验3G流量</h4>
+					<h4>日本/香港/台湾/新加坡/韩国/美国/英国</h4>
+					<h4>支持SS</h4>
+					<h4>包年不限流量(含CN2),自动开通,扫码配置</h4>
+					<p>
+						<a href="#" class="btn btn-warning"><i class="fa fa-home"></i> 前往官网</a>
+					</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<h3>
+						<a href="#"><font color="white">V2SS</font></a>
+					</h3>
+					<h4>1元体验1G流量</h4>
+					<h4>香港CN2/新加坡CN2/AZUREHK/SK</h4>
+					<h4>支持SS,SSR</h4>
+					<h4>普通和高级套餐,扫码自动配置,支付宝</h4>
+					<p>
+						<a href="#" class="btn btn-danger"><i class="fa fa-home"></i> 前往官网</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="text-center">
+		<div class="footer-above">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 footer-col">
+						<h3>免责声明</h3>
+						<p>本站提供SS仅供学习交流和实验用途，请遵守国家法律，服务器已禁止Spam、BT下载,绝大多数非法网站和非法信息</p>
+					</div>
+					<div class="col-md-4 footer-col">
+						<h3>社交网络</h3>
+						<ul class="list-inline">
+							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a></li>
+							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a></li>
+							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
+							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-col">
+						<h3>联系我们</h3>
+						<p>如有任何问题，请联系admin@ishadowsocks.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-below">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">Copyright © iss 2016</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-top page-scroll visible-xs visible-sm">
+		<a href="#page-top" class="btn btn-primary"><i class="fa fa-chevron-up"></i></a>
+	</div>
+	
+	
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	  <script src="js/jquery.easing.min.js"></script>
+	  <script src="js/classie.js"></script>
+	  <script src="js/cbpAnimatedHeader.js"></script>
+	   <script>
+	//jQuery for page scrolling feature - requires jQuery Easing plugin
+	$(function(){
+		$('body').on('click','.page-scroll a',function(event){
+			var $anchor = $(this);
+			$('html,body').stop().animate({
+				scrollTop:$($anchor.attr('href')).offset().top
+			},1500,'easeInOutExpo');
+			event.preventDefault();
+		});
+	});
+	// Highlight the top nav as scrolling occurs
+	$('body').scrollspy({
+    target: '.navbar-fixed-top'
+	});
+	// Closes the Responsive Menu on Menu Item Click
+	$('.navbar-collapse ul li a').click(function(){
+		$('.navbar-toggle:visible').click();
+	});
+	  </script>
+	<style>
+
+	</style>
+</body>
+</html>
