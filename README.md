@@ -1,6 +1,10 @@
 # 基于bootstrap的响应式页面
 一个响应式的静态页面
 
+# Git Pages 演示地址
+[https://cmdfas.github.io/bootstrap-demopage/](https://cmdfas.github.io/bootstrap-demopage/)
+
+
 ## 主要实现
 - 主要使用HTML5 + CSS3 + bootstrap布局。
 - 项目中用到了Font Awesome图标字体库，很方便很强大库。
